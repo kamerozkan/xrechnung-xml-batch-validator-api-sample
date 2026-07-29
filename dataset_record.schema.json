@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/kamerozkan/xrechnung-xml-batch-validator-api-sample/main/dataset_record.schema.json",
+  "title": "XRechnung and ZUGFeRD validation dataset record",
+  "description": "Public sample projection of one deterministic invoice validation result.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "inputIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "documentId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "fileName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "processingStatus": {
+      "type": "string",
+      "enum": [
+        "SUCCEEDED",
+        "FAILED"
+      ]
+    },
+    "conformanceStatus": {
+      "type": "string",
+      "enum": [
+        "ACCEPTED",
+        "REJECTED",
+        "NOT_EVALUATED"
+      ]
+    },
+    "sourceFormat": {
+      "type": "string"
+    },
+    "validationFamily": {
+      "type": "string"
+    },
+    "syntax": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "scenario": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fatal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "error": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warning": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "information": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "fatal",
+        "error",
+        "warning",
+        "information"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "FATAL",
+              "ERROR",
+              "WARNING",
+              "INFORMATION"
+            ]
+          },
+          "stage": {
+            "type": "string"
+          },
+          "ruleId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "test": {
+            "type": "string"
+          },
+          "originalSeverity": {
+            "type": "string"
+          },
+          "failedChecks": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "severity"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "findingsTruncated": {
+      "type": "boolean"
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "embeddedXmlSha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "container": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "pdfaStatus": {
+              "type": "string"
+            },
+            "pdfaProfile": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "metadataStatus": {
+              "type": "string"
+            },
+            "embeddedFileName": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "embeddedFileBytes": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "afRelationship": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "mimeType": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "visibleContentConsistency": {
+              "type": "string"
+            },
+            "signatureStatus": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "checkedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reports": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
+        }
+      ]
+    }
+  },
+  "required": [
+    "inputIndex",
+    "documentId",
+    "fileName",
+    "processingStatus",
+    "conformanceStatus",
+    "sourceFormat",
+    "validationFamily",
+    "syntax",
+    "profile",
+    "counts",
+    "findings",
+    "findingsTruncated",
+    "checkedAt",
+    "reports"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "processingStatus": {
+            "const": "FAILED"
+          }
+        },
+        "required": [
+          "processingStatus"
+        ]
+      },
+      "then": {
+        "properties": {
+          "conformanceStatus": {
+            "const": "NOT_EVALUATED"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "processingStatus": {
+            "const": "SUCCEEDED"
+          }
+        },
+        "required": [
+          "processingStatus"
+        ]
+      },
+      "then": {
+        "properties": {
+          "conformanceStatus": {
+            "enum": [
+              "ACCEPTED",
+              "REJECTED"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

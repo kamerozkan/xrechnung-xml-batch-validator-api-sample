@@ -1,0 +1,49 @@
+{
+  "inputIndex": 4,
+  "documentId": "zugferd-invalid-pdfa",
+  "fileName": "invalidPDF.pdf",
+  "processingStatus": "SUCCEEDED",
+  "conformanceStatus": "REJECTED",
+  "sourceFormat": "ZUGFERD_PDF",
+  "validationFamily": "ZUGFERD",
+  "syntax": "CII_INVOICE",
+  "profile": "ZUGFERD_EN16931",
+  "scenario": "ZUGFeRD 2.5 / Factur-X 1.09 EN16931",
+  "counts": {
+    "fatal": 0,
+    "error": 1,
+    "warning": 3,
+    "information": 0
+  },
+  "findings": [
+    {
+      "severity": "ERROR",
+      "stage": "PDF_A",
+      "ruleId": "ISO 19005-3:2012 6.2.4.3-2",
+      "failedChecks": 5
+    }
+  ],
+  "findingsTruncated": false,
+  "sha256": "30b44b5ba1a0b38b8871c9bde2154bb3bdebc7b4a6f43d4579a5d46bf5634957",
+  "embeddedXmlSha256": "5203ba77a991466a7fc65f144abbf3eb8b45082686ef9c10aa07c79513e73ada",
+  "container": {
+    "type": "PDF_A_3",
+    "pdfaStatus": "NON_COMPLIANT",
+    "pdfaProfile": "PDF/A-3u validation profile",
+    "metadataStatus": "CONSISTENT",
+    "embeddedFileName": "factur-x.xml",
+    "embeddedFileBytes": 10248,
+    "afRelationship": "Alternative",
+    "mimeType": "text/xml",
+    "visibleContentConsistency": "NOT_VERIFIED",
+    "signatureStatus": "NOT_CHECKED"
+  },
+  "checkedAt": "2026-07-29T05:54:18.578934Z",
+  "reports": {
+    "validationXmlKey": "VALIDATION-REPORT-0005-zugferd-invalid-pdfa.xml",
+    "htmlKey": "VALIDATION-REPORT-0005-zugferd-invalid-pdfa.html",
+    "pdfaXmlKey": "VALIDATION-REPORT-0005-zugferd-invalid-pdfa.pdfa.xml",
+    "extractedInvoiceXmlKey": "VALIDATION-REPORT-0005-zugferd-invalid-pdfa.invoice.xml"
+  },
+  "error": null
+}

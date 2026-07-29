@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "documentId": "xrechnung-valid",
+      "fileName": "valid-xrechnung.xml",
+      "url": "https://raw.githubusercontent.com/itplr-kosit/xrechnung-testsuite/v2026-01-31/src/test/business-cases/standard/01.01a-INVOICE_ubl.xml"
+    }
+  ],
+  "resultDetail": "FINDINGS",
+  "maxFindingsPerDocument": 100,
+  "storeXmlReport": true,
+  "storeHtmlReport": true,
+  "storePdfaReport": false,
+  "storeExtractedInvoiceXml": false
+}

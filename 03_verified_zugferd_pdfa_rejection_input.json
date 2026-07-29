@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "documentId": "zugferd-invalid-pdfa",
+      "fileName": "invalidPDF.pdf",
+      "url": "https://raw.githubusercontent.com/ZUGFeRD/mustangproject/87380b8e58624df9efdd9c568f6500d53709c165/validator/src/test/resources/invalidPDF.pdf"
+    }
+  ],
+  "resultDetail": "FINDINGS",
+  "maxFindingsPerDocument": 100,
+  "storeXmlReport": true,
+  "storeHtmlReport": true,
+  "storePdfaReport": true,
+  "storeExtractedInvoiceXml": true
+}

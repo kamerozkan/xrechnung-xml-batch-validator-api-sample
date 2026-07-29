@@ -1,0 +1,47 @@
+{
+  "inputIndex": 1,
+  "documentId": "xrechnung-invalid",
+  "fileName": "invalid-xrechnung.xml",
+  "processingStatus": "SUCCEEDED",
+  "conformanceStatus": "REJECTED",
+  "sourceFormat": "XML",
+  "validationFamily": "XRECHNUNG",
+  "syntax": "UBL_INVOICE",
+  "profile": "XRECHNUNG_CIUS",
+  "scenario": "EN16931 XRechnung (UBL Invoice)",
+  "versions": {
+    "validator": "1.6.0",
+    "configurationRelease": "2026-01-31",
+    "xrechnung": "3.0.2",
+    "cenSchematron": "1.3.15",
+    "mustang": "2.24.0",
+    "veraPdf": "1.30.2",
+    "zugferdRules": "2.5",
+    "facturXRules": "1.09"
+  },
+  "counts": {
+    "fatal": 0,
+    "error": 1,
+    "warning": 0,
+    "information": 0
+  },
+  "findings": [
+    {
+      "severity": "ERROR",
+      "ruleId": "UBL-CR-646",
+      "message": "[UBL-CR-646]-A UBL invoice should not include the InvoiceLine SubInvoiceLine",
+      "location": "/Q{urn:oasis:names:specification:ubl:schema:xsd:Invoice-2}Invoice[1]",
+      "originalSeverity": "WARNING"
+    }
+  ],
+  "findingsTruncated": false,
+  "sha256": "7455ce3d58b5869a76abd4d0187f8f10a7c1462ecb6ce32bfe07044e61f57e10",
+  "embeddedXmlSha256": null,
+  "container": null,
+  "checkedAt": "2026-07-29T05:53:18.685160Z",
+  "reports": {
+    "validationXmlKey": "VALIDATION-REPORT-0002-xrechnung-invalid.xml",
+    "htmlKey": "VALIDATION-REPORT-0002-xrechnung-invalid.html"
+  },
+  "error": null
+}

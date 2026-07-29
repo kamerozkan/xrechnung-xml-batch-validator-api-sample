@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "documentId": "xrechnung-invalid",
+      "fileName": "invalid-xrechnung.xml",
+      "url": "https://raw.githubusercontent.com/itplr-kosit/validator-configuration-xrechnung/v2026-01-31/src/test/integration/ubl-cr-646-sub-invoice-lines-cius.xml"
+    }
+  ],
+  "resultDetail": "FINDINGS",
+  "maxFindingsPerDocument": 100,
+  "storeXmlReport": true,
+  "storeHtmlReport": true,
+  "storePdfaReport": false,
+  "storeExtractedInvoiceXml": false
+}
