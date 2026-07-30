@@ -3,7 +3,7 @@
 # XRechnung & ZUGFeRD Invoice Validator API: Samples and JSON Schema
 
 [![Apify Actor](https://img.shields.io/badge/Apify-Run%20Actor-00c7b7?logo=apify)](https://apify.com/kamerozkan/xrechnung-xml-batch-validator-api)
-![Latest build](https://img.shields.io/badge/latest_build-0.0.13%20SUCCEEDED-2f855a)
+![Latest build](https://img.shields.io/badge/latest_build-0.0.16%20SUCCEEDED-2f855a)
 ![Verified run](https://img.shields.io/badge/verified_run-0.0.9%20%7C%205%20records-2f855a)
 ![JSON Schema](https://img.shields.io/badge/schema-JSON%20Schema%202020--12-4c1)
 ![Samples](https://img.shields.io/badge/samples-3%20live%20rows-2f855a)
@@ -22,7 +22,7 @@ This repository contains three runnable inputs, three real output rows, and the 
 3. Run the public fixtures first, then replace the document source with your own HTTPS URL, upload, inline XML, base64 value, or Apify key-value store record.
 4. Keep optional raw reports off for real invoices unless your retention and access controls are ready.
 
-At the 2026-07-29 audit, the Actor was public and latest build `0.0.13` had completed successfully. The output rows below came from successful run `R9gep9fAWMbrVA96h` on build `0.0.9`, which produced five records. The fixture SHA-256 values were independently matched to the committed source URLs. See [`DATA_NOTICE.md`](DATA_NOTICE.md) for the exact version and provenance boundary.
+At the 2026-07-30 portfolio audit, the Actor was public and latest build `0.0.16` had completed successfully. The output rows below came from successful run `R9gep9fAWMbrVA96h` on build `0.0.9`, which produced five records. The fixture SHA-256 values were independently matched to the committed source URLs. See [`DATA_NOTICE.md`](DATA_NOTICE.md) for the exact version and provenance boundary.
 
 ## What is checked
 
@@ -358,3 +358,12 @@ The Actor is also discoverable and runnable by AI agents through Apify's MCP ser
 ## License
 
 The original documentation, sample projections, and JSON Schema in this repository are available under the [MIT License](LICENSE). Third-party fixtures, standards, trademarks, validation engines, and source material are excluded from that license.
+
+## E-Invoice Automation Suite
+
+This repository is part of a 16-product invoice automation family. Public Actor links are runnable Store listings. Private labels are release-state disclosures, not public availability claims.
+
+- Public validators: [`xrechnung-xml-batch-validator-api`](https://apify.com/kamerozkan/xrechnung-xml-batch-validator-api) ([`xrechnung-xml-batch-validator-api-sample`](https://github.com/kamerozkan/xrechnung-xml-batch-validator-api-sample)), [`france-einvoice-validator`](https://apify.com/kamerozkan/france-einvoice-validator) ([`france-einvoice-validator-sample`](https://github.com/kamerozkan/france-einvoice-validator-sample)), [`italy-fatturapa-validator`](https://apify.com/kamerozkan/italy-fatturapa-validator) ([`italy-fatturapa-validator-sample`](https://github.com/kamerozkan/italy-fatturapa-validator-sample)), [`peppol-bis-preflight-validator`](https://apify.com/kamerozkan/peppol-bis-preflight-validator) ([`peppol-bis-preflight-validator-sample`](https://github.com/kamerozkan/peppol-bis-preflight-validator-sample)), and [`poland-ksef-preflight-validator`](https://apify.com/kamerozkan/poland-ksef-preflight-validator) ([`poland-ksef-preflight-validator-sample`](https://github.com/kamerozkan/poland-ksef-preflight-validator-sample)).
+- Private validator preview: `romania-efactura-validator` ([`romania-efactura-validator-sample`](https://github.com/kamerozkan/romania-efactura-validator-sample)), private release preview with a successful hosted build.
+- Private generators with successful hosted builds: `xrechnung-invoice-generator` ([`xrechnung-invoice-generator-sample`](https://github.com/kamerozkan/xrechnung-invoice-generator-sample)), `peppol-ubl-invoice-generator` ([`peppol-ubl-invoice-generator-sample`](https://github.com/kamerozkan/peppol-ubl-invoice-generator-sample)), `zugferd-facturx-pdf-generator` ([`zugferd-facturx-pdf-generator-sample`](https://github.com/kamerozkan/zugferd-facturx-pdf-generator-sample)), `fatturapa-invoice-generator` ([`fatturapa-invoice-generator-sample`](https://github.com/kamerozkan/fatturapa-invoice-generator-sample)), and `ksef-fa-invoice-generator` ([`ksef-fa-invoice-generator-sample`](https://github.com/kamerozkan/ksef-fa-invoice-generator-sample)).
+- Parsers and converters: public [`zugferd-facturx-pdf-to-json`](https://apify.com/kamerozkan/zugferd-facturx-pdf-to-json) ([`zugferd-facturx-pdf-to-json-sample`](https://github.com/kamerozkan/zugferd-facturx-pdf-to-json-sample)); private release-ready `xrechnung-to-json-parser` ([`xrechnung-to-json-parser-sample`](https://github.com/kamerozkan/xrechnung-to-json-parser-sample)); private hosted-build-ready `peppol-ubl-to-json-parser` ([`peppol-ubl-to-json-parser-sample`](https://github.com/kamerozkan/peppol-ubl-to-json-parser-sample)), `zugferd-to-xrechnung-converter` ([`zugferd-to-xrechnung-converter-sample`](https://github.com/kamerozkan/zugferd-to-xrechnung-converter-sample)), and `ubl-cii-format-converter` ([`ubl-cii-format-converter-sample`](https://github.com/kamerozkan/ubl-cii-format-converter-sample)).
