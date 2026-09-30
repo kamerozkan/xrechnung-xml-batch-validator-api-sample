@@ -1,0 +1,15 @@
+{
+  "id": "PtcUXR04GofVFXxb9",
+  "name": "xrechnung-xml-batch-validator-api",
+  "title": "XRechnung & ZUGFeRD Invoice Validator API",
+  "description": "Validate XRechnung 3.0.x XML and ZUGFeRD 2.5 or Factur-X 1.09 XML/PDF with pinned rules and structured findings. Batch e-invoice validation and E-Rechnung Prüfung for accounts payable automation, Steuerberater workflows, ERP and einvoice pipelines via API, n8n, Make, or MCP agents.",
+  "seoTitle": "XRechnung & ZUGFeRD Invoice Validator API",
+  "seoDescription": "Validate XRechnung XML and ZUGFeRD or Factur-X invoices with pinned rules. Export technical findings in batches for ERP and accounts payable workflows.",
+  "isPublic": true,
+  "url": "https://apify.com/kamerozkan/xrechnung-xml-batch-validator-api",
+  "checkedAt": "2026-09-30",
+  "changeScope": "listing metadata and sample documentation only",
+  "runtimeChanged": false,
+  "schemasChanged": false,
+  "examplesRegenerated": false
+}
